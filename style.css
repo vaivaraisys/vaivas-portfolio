@@ -228,3 +228,94 @@ hr {
 p, ul, li {
     color: var(--color-light-text); /* #333 */ 
 }
+
+
+/* About me Styling */
+/* 6. ABOUT ME PAGE STYLES */
+
+#about-content {
+    padding: 40px 0;
+}
+
+.about-grid {
+    display: grid;
+    /* Default: Stack columns vertically for mobile */
+    grid-template-columns: 1fr; 
+    gap: 60px; /* Space between columns */
+    align-items: start; /* Align content to the top */
+}
+
+/* Two-column layout for larger screens */
+@media (min-width: 900px) {
+    .about-grid {
+        /* Define two columns: one narrow for the snapshot, one wide for the text */
+        grid-template-columns: 1fr 2fr; 
+    }
+}
+
+.bio-snapshot img {
+    width: 100%;
+    max-width: 300px; /* Max size for the photo */
+    height: auto;
+    border-radius: 8px; /* Slightly rounded corners */
+    margin-bottom: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.key-skills h3 {
+    border-bottom: 2px solid var(--color-accent-blue);
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+.key-skills ul {
+    list-style: none; /* Remove bullet points */
+    padding-left: 0;
+}
+
+.key-skills li {
+    background-color: #e6e9ff; /* Light color background for skill pills */
+    color: var(--color-accent-blue);
+    padding: 8px 15px;
+    margin-bottom: 8px;
+    border-radius: 20px;
+    display: inline-block; /* Makes them act like "pills" */
+    font-size: 0.95em;
+    font-weight: 500;
+    margin-right: 5px;
+}
+
+.bio-narrative h3 {
+    margin-top: 25px;
+}
+
+
+/* 7. CUSTOM CURSOR STYLES */
+
+/* Hide the default system cursor on the entire body */
+body {
+    cursor: none !important; 
+}
+
+/* Base style for your custom cursor (a small circle) */
+.custom-cursor {
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--color-accent-blue); /* Your primary blue border */
+    border-radius: 50%; /* Makes it a circle */
+    position: fixed; /* Keeps it in the viewport */
+    top: 0;
+    left: 0;
+    pointer-events: none; /* Crucial: ensures it doesn't block clicks on elements underneath */
+    z-index: 9999; /* Makes sure it's always on top */
+    transform: translate(-50%, -50%); /* Centers the div exactly on the mouse point */
+    transition: width 0.3s ease, height 0.3s ease, background-color 0.3s ease, border-color 0.3s ease; /* For smooth transitions */
+}
+
+/* State when hovering over a link or card */
+.custom-cursor.active {
+    width: 60px; /* Make it bigger */
+    height: 60px;
+    background-color: rgba(0, 30, 203, 0.2); /* Semi-transparent blue fill */
+    border-color: transparent; /* Hide the border when it expands */
+}
