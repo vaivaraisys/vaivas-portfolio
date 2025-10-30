@@ -284,6 +284,81 @@ p, ul, li {
     margin-top: 25px;
 }
 
+/* Update or add this for #about-hero */
+#about-hero {
+    padding: var(--padding-section) 20px; /* Add horizontal padding */
+    text-align: center; /* Center the text */
+    max-width: var(--max-width-content); /* Limit the width */
+    margin: 0 auto; /* Crucial: Centers the block element itself */
+    margin-bottom: 60px; /* Add some space before the next section */
+}
+
+#about-hero h1 {
+    font-size: 3em; /* Adjust as needed */
+    margin-bottom: 15px;
+}
+
+#about-hero h2 {
+    font-size: 1.8em; /* Adjust as needed */
+    color: var(--color-text-light); /* Make the secondary heading lighter */
+    margin-bottom: 25px;
+}
+
+#about-hero p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    max-width: 700px; /* Optional: limit width of paragraph for readability */
+    margin: 0 auto; /* Center the paragraph if max-width is applied */
+}
+
+/* Update or add this for #about-content */
+#about-content {
+    padding: 0 20px; /* Add horizontal padding to the section */
+    max-width: var(--max-width-content); /* Limit the section's width */
+    margin: 0 auto; /* Crucial: Centers the block element itself */
+    margin-bottom: 80px; /* Space before the next section */
+}
+
+/* Ensure the about-grid is correctly configured */
+.about-grid {
+    display: grid;
+    /* Default: Stack columns vertically for mobile */
+    grid-template-columns: 1fr;
+    gap: 60px; /* Space between columns */
+    align-items: start; /* Align content to the top */
+}
+
+/* Two-column layout for larger screens */
+@media (min-width: 900px) {
+    .about-grid {
+        /* Define two columns: one narrow for the snapshot (e.g., 300px), one flexible for the text */
+        grid-template-columns: 300px 1fr;
+    }
+}
+
+/* Make sure your image is responsive within its column */
+.bio-snapshot img {
+    width: 100%; /* Image takes full width of its column */
+    max-width: 300px; /* But doesn't exceed its natural size or desired max */
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* You might also want to add this if your 'key-skills' list is not centered in the snapshot column */
+.bio-snapshot {
+    display: flex; /* Use flex to center its children vertically */
+    flex-direction: column;
+    align-items: center; /* Center items horizontally within this column */
+}
+
+.content-wrapper { /* Or whatever class you use for general content */
+    max-width: var(--max-width-content); /* Or a specific pixel value like 1200px */
+    margin: 0 auto; /* Centers the div horizontally */
+    padding: 0 20px; /* Add some padding on the sides for smaller screens */
+}
+
 
 /* 7. CUSTOM CURSOR STYLES */
 
