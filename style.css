@@ -11,7 +11,7 @@
     --color-light-text: #333;
     
     /* Font Stack - Use a professional, readable sans-serif */
-    --font-primary: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    --font-primary: 'Monserrat','Helvetica Neue', sans-serif;
 }
 
 * {
@@ -150,11 +150,6 @@ main {
     grid-template-columns: 1fr; /* Default to 1 column for mobile */
 }
 
-/* Apply the grid wrapper to the section if possible, 
-   but since your HTML just has the cards inside, 
-   we'll apply these styles directly to the section and cards for now. 
-   (Note: For better structure, consider wrapping the articles in a <div> with a class like .case-study-grid)
-*/
 
 @media (min-width: 768px) {
     #featured-work {
